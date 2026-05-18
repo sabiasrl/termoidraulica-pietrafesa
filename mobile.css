@@ -1,0 +1,192 @@
+#settori {
+  display: none;
+}
+
+.hero#home {
+  width: calc(100% + 2 * var(--main-pad-x));
+  max-width: none;
+  margin-left: calc(-1 * var(--main-pad-x));
+  margin-right: calc(-1 * var(--main-pad-x));
+  border-radius: 0;
+}
+
+.stats-strip.stats-strip--brands {
+  display: none !important;
+}
+
+.mobile-menu nav a[href="#settori"] {
+  display: none;
+}
+
+.mobile-menu nav a[href="#assistenza"] {
+  display: none !important;
+}
+
+#assistenza {
+  display: none !important;
+}
+
+.assistance-section {
+  display: none !important;
+}
+
+#assistenza .assistance-card {
+  display: none !important;
+}
+
+#home .hero-inner {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#home .hero-copy,
+#home .hero-lead,
+#home .hero-cta,
+#home .hero-bullets {
+  display: block !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#home .hero-lead,
+#home .hero-cta,
+#home .hero-bullets {
+  display: none !important;
+}
+
+.card-text-collapsible {
+  overflow: visible;
+}
+
+.card-see-more-link {
+  color: var(--primary-hover);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#chi-siamo .section-intro--always-visible {
+  display: block !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.company-contacts-title {
+  display: block;
+  margin: 1.35rem 0 0.45rem;
+}
+
+.stats-strip-brand-cloud .brand-cloud {
+  justify-content: flex-start;
+  gap: 0.45rem;
+}
+
+.stats-strip--brands .brand-logo-chip {
+  width: 68px;
+  height: 24px;
+  padding: 0;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding-left: 0;
+}
+
+.section-process .section-intro {
+  display: none;
+}
+
+.process-steps li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.15rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.process-step-num {
+  display: none;
+}
+
+.process-steps li::before {
+  content: "✓";
+  color: var(--primary-hover);
+  font-weight: 800;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.process-steps li > div {
+  min-width: 0;
+}
+
+.process-steps p {
+  display: none;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding-left: 0;
+}
+
+.portfolio-section .section-intro {
+  display: none;
+}
+
+.portfolio-card {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.15rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.portfolio-card::before {
+  content: "✓";
+  color: var(--primary-hover);
+  font-weight: 800;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.portfolio-card h3 {
+  margin: 0;
+}
+
+.portfolio-card p {
+  display: none;
+}
+
+.why-grid {
+  gap: 0.7rem;
+}
+
+.why-card {
+  padding: 0.35rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
