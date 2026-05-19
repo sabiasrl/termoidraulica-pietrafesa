@@ -1,32 +1,34 @@
 :root {
-  /* Brand palette from favicon: cyan blue, orange, white */
+  /* Brand palette from favicon: blue #0072BC, orange, white */
   --brand-white: #ffffff;
-  --brand-blue: #00ccff;
-  --brand-blue-dark: #00a8d4;
-  --brand-blue-deep: #007aa3;
+  --brand-blue: #0072bc;
+  --brand-blue-dark: #005e9a;
+  --brand-blue-deep: #004a7c;
+  --brand-blue-rgb: 0, 114, 188;
   --brand-orange: #ff6501;
   --brand-orange-dark: #e55800;
   --brand-orange-deep: #c44d00;
+  --brand-orange-rgb: 255, 101, 1;
 
   /* Matches main horizontal padding — used to full-bleed sections without 100vw (avoids mobile horizontal scroll). */
   --main-pad-x: clamp(1rem, 4vw, 1.75rem);
   --font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-  --bg: #f3fbff;
+  --bg: #f0f6fb;
   --bg-elevated: var(--brand-white);
   --text: #1a3240;
   --text-secondary: #3d5363;
   --muted: #5f7585;
   --primary: var(--brand-blue);
   --primary-hover: var(--brand-blue-dark);
-  --primary-soft: rgba(0, 204, 255, 0.14);
+  --primary-soft: rgba(var(--brand-blue-rgb), 0.14);
   --accent: var(--brand-orange);
   --accent-hover: var(--brand-orange-dark);
   --accent-soft: rgba(255, 101, 1, 0.12);
   --accent-line: linear-gradient(90deg, var(--brand-blue), var(--brand-orange));
   --surface: rgba(255, 255, 255, 0.85);
   --surface-solid: var(--brand-white);
-  --border: rgba(0, 122, 163, 0.1);
-  --border-strong: rgba(0, 122, 163, 0.16);
+  --border: rgba(var(--brand-blue-rgb), 0.12);
+  --border-strong: rgba(var(--brand-blue-rgb), 0.18);
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -175,13 +177,13 @@ button:focus-visible {
 .brand-text {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.2rem;
   min-width: 0;
 }
 
 .brand-title {
   font-weight: 700;
-  font-size: clamp(0.78rem, 2.1vw, 0.95rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.08rem);
   letter-spacing: -0.02em;
   color: var(--text);
   line-height: 1.15;
@@ -189,7 +191,7 @@ button:focus-visible {
 
 .brand-tagline {
   font-weight: 500;
-  font-size: clamp(0.62rem, 1.45vw, 0.72rem);
+  font-size: clamp(0.72rem, 1.75vw, 0.84rem);
   line-height: 1.35;
   color: var(--muted);
   max-width: 22rem;
@@ -219,7 +221,7 @@ button:focus-visible {
 }
 
 .menu-toggle:hover {
-  border-color: rgba(0, 204, 255, 0.35);
+  border-color: rgba(var(--brand-blue-rgb), 0.35);
   background: #f8fafc;
 }
 
@@ -575,7 +577,7 @@ h2 {
 
 .services-panel {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.95) 0%, rgba(243, 251, 255, 0.9) 55%, rgba(255, 248, 243, 0.88) 100%);
-  border: 1px solid rgba(0, 204, 255, 0.12);
+  border: 1px solid rgba(var(--brand-blue-rgb), 0.12);
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
@@ -613,7 +615,7 @@ h2 {
 }
 
 .btn-ghost:hover {
-  border-color: rgba(0, 204, 255, 0.35);
+  border-color: rgba(var(--brand-blue-rgb), 0.35);
   color: var(--text);
   background: #f8fafc;
 }
@@ -625,7 +627,7 @@ h2 {
 .portfolio-placeholder {
   margin: 0;
   padding: 1.5rem 1.35rem;
-  border: 1px dashed rgba(0, 204, 255, 0.35);
+  border: 1px dashed rgba(var(--brand-blue-rgb), 0.35);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.55);
 }
@@ -726,7 +728,7 @@ h2 {
 }
 
 .card:hover {
-  border-color: rgba(0, 204, 255, 0.2);
+  border-color: rgba(var(--brand-blue-rgb), 0.2);
   box-shadow: var(--shadow-md);
 }
 
@@ -927,7 +929,7 @@ h2 {
   .service-item:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(0, 204, 255, 0.15);
+    border-color: rgba(var(--brand-blue-rgb), 0.15);
   }
 }
 
@@ -974,11 +976,11 @@ h2 {
   }
 
   .brand-title {
-    font-size: 1rem;
+    font-size: 1.12rem;
   }
 
   .brand-tagline {
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     max-width: 36rem;
   }
 
@@ -1008,12 +1010,26 @@ h2 {
 
   .hero-inner {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: clamp(2rem, 5vw, 3.5rem);
   }
 
   .hero-copy {
     flex: 1.08;
+    order: 2;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero-copy h1 {
+    margin-top: 0;
+  }
+
+  .hero-subtitle {
+    display: none;
   }
 
   .hero-partners-card {
@@ -1029,12 +1045,15 @@ h2 {
   }
 
   .hero-logo {
-    flex: 0.95;
-    max-width: min(46%, 440px);
+    flex: 1;
+    max-width: min(52%, 520px);
+    order: 1;
+    align-self: flex-start;
   }
 
   .hero-logo img {
     max-width: 100%;
+    margin-inline: 0;
   }
 
   .card-grid {
@@ -1075,9 +1094,13 @@ h2 {
 /* —— HVAC-style deep layout (inspired by multi-section home-services templates) —— */
 
 .hero--hvac {
-  background: var(--surface-solid);
+  background: #fff;
   border-color: var(--border);
   backdrop-filter: none;
+}
+
+#home.hero--hvac {
+  background: #fff;
 }
 
 .hero-logo {
@@ -1089,9 +1112,10 @@ h2 {
 .hero-logo img {
   display: block;
   width: 100%;
-  max-width: min(100%, 22rem);
+  max-width: min(100%, 32rem);
   height: auto;
   margin-inline: auto;
+  border-radius: var(--radius-md);
 }
 
 .hero-eyebrow {
@@ -1101,6 +1125,69 @@ h2 {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+.hero-services {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.55rem;
+}
+
+.hero-services li {
+  font-size: clamp(0.9rem, 2.4vw, 1.05rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--brand-orange);
+  padding: 0.4rem 0.8rem;
+  background: rgba(var(--brand-orange-rgb), 0.12);
+  border: 1px solid var(--brand-orange);
+  border-radius: var(--radius-sm);
+}
+
+.hero-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+}
+
+.hero-phone {
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+  line-height: 1.2;
+  color: var(--primary-hover);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.hero-phone:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-vcard {
+  display: inline-flex;
+  flex-shrink: 0;
+  line-height: 0;
+  border-radius: 50%;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-vcard:hover {
+  transform: scale(1.06);
+  opacity: 0.9;
+}
+
+.hero-vcard img {
+  display: block;
+  width: 2.1rem;
+  height: 2.1rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .hero-eyebrow--assist {
@@ -1478,7 +1565,7 @@ h2 {
 
 .brand-tag--primary {
   background: var(--primary-soft);
-  border-color: rgba(0, 204, 255, 0.28);
+  border-color: rgba(var(--brand-blue-rgb), 0.28);
   color: var(--primary-hover);
   font-size: 0.88rem;
   font-weight: 700;
@@ -1539,7 +1626,7 @@ h2 {
   padding: clamp(2.25rem, 6vw, 3.75rem) var(--main-pad-x);
   background: linear-gradient(
     165deg,
-    rgba(0, 204, 255, 0.07) 0%,
+    rgba(var(--brand-blue-rgb), 0.07) 0%,
     rgba(255, 255, 255, 0.94) 42%,
     rgba(255, 101, 1, 0.06) 100%
   );

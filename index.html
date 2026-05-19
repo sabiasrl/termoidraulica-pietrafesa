@@ -18,7 +18,7 @@
     <meta name="geo.placename" content="Pietragalla" />
     <meta name="geo.position" content="40.7474;15.8376" />
     <meta name="ICBM" content="40.7474, 15.8376" />
-    <meta name="theme-color" content="#00ccff" />
+    <meta name="theme-color" content="#0072bc" />
     <meta name="format-detection" content="telephone=yes" />
     <link rel="canonical" href="https://www.termoidraulicapietrafesa.it/" />
     <link rel="alternate" hreflang="it-IT" href="https://www.termoidraulicapietrafesa.it/" />
@@ -55,6 +55,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)" />
+    <link rel="preload" as="image" href="assets/termoidraulica-pietrafesa-card.png" fetchpriority="high" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -202,8 +203,8 @@
           <img
             src="assets/favicon.png"
             alt=""
-            width="503"
-            height="503"
+            width="972"
+            height="972"
             decoding="async"
             fetchpriority="high"
           />
@@ -211,7 +212,6 @@
         <span class="brand-text">
           <span class="brand-title">TERMOIDRAULICA PIETRAFESA</span>
           <span class="brand-tagline">di Donatello Pietrafesa</span>
-          <span class="brand-tagline">San Nicola di Pietragalla (PZ)</span>
         </span>
       </a>
       <button
@@ -244,7 +244,7 @@
         aria-label="Vai in cima alla pagina, sezione principale"
       >
         <span class="mobile-menu-brand-mark" aria-hidden="true">
-          <img src="assets/favicon.png" alt="" width="503" height="503" decoding="async" />
+          <img src="assets/favicon.png" alt="" width="972" height="972" decoding="async" />
         </span>
         <span class="mobile-menu-brand-title">TERMOIDRAULICA PIETRAFESA</span>
         <span class="mobile-menu-brand-sub-block">
@@ -267,18 +267,32 @@
         <div class="hero-inner">
           <div class="hero-copy">
             <h1>Qualità e professionalità al tuo servizio</h1>
+            <ul class="hero-services" aria-label="Aree di intervento">
+              <li>Impianti idrici</li>
+              <li>Impianti termici</li>
+              <li>Condizionamento</li>
+            </ul>
+            <div class="hero-contact">
+              <a
+                class="hero-vcard"
+                href="assets/contact.vcf"
+                download="termoidraulica-pietrafesa.vcf"
+                type="text/vcard"
+                aria-label="Aggiungi in rubrica"
+                title="Aggiungi in rubrica"
+              >
+                <img src="assets/contacts.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+              </a>
+              <a class="hero-phone" href="tel:+393486927870">348 6927870</a>
+            </div>
             <p class="hero-subtitle">
               Termoidraulica Pietrafesa offre competenze eccellenti nell&apos;installazione e manutenzione di
-              impianti di condizionamento, riscaldamento, idraulici e termoidraulici.
+              impianti idraulici, termoidraulici e di riscaldamento.
             </p>
             <p class="hero-lead">
               Grazie a soluzioni tecniche all&apos;avanguardia, garantiamo il massimo comfort termico e idrico, abbinato
               a un&apos;efficienza energetica superiore.
             </p>
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a>
-              <a class="btn btn-ghost" href="#servizi">Esplora i servizi</a>
-            </div>
             <ul class="hero-bullets" aria-label="Punti di forza">
               <li>Professionalità e attenzione ai dettagli</li>
               <li>Servizi completi per ogni esigenza domestica</li>
@@ -286,10 +300,10 @@
           </div>
           <figure class="hero-logo">
             <img
-              src="assets/logo.jpeg"
-              alt="Termoidraulica Pietrafesa — impianti idraulici e termoidraulici"
-              width="1378"
-              height="593"
+              src="assets/termoidraulica-pietrafesa-card.png"
+              alt="Termoidraulica Pietrafesa di Donatello Pietrafesa — logo e contatti"
+              width="2526"
+              height="1786"
               loading="eager"
               decoding="async"
               fetchpriority="high"
@@ -398,31 +412,6 @@
           <article class="service-item">
             <div class="service-item-media">
               <img
-                src="assets/solar-panel-industry.jpg"
-                alt=""
-                width="800"
-                height="500"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="service-item-body">
-              <h3>Fotovoltaico e coperture</h3>
-              <p>
-                Stringhe, inverter, monitoraggio base: dimensioniamo la potenza installata in funzione dei consumi
-                elettrici e del profilo di autoconsumo, con attenzione agli ombreggiamenti e alla struttura della
-                copertura.
-              </p>
-              <ul class="service-list">
-                <li>Analisi preliminare di irraggiamento e vincoli edilizi</li>
-                <li>Integrazione architettonica e canaline</li>
-                <li>Supporto alla documentazione per connessione in rete</li>
-              </ul>
-            </div>
-          </article>
-          <article class="service-item">
-            <div class="service-item-media">
-              <img
                 src="assets/pavimento-radiante-guida.jpeg"
                 alt="Impianto di riscaldamento a pavimento in fase di installazione"
                 width="800"
@@ -507,7 +496,7 @@
             <div class="service-item-body">
               <h3>Riscaldamento e efficienza</h3>
               <p>
-                Generatori a condensazione, ibridi, integrazione con solare termico o pompe di calore: ottimizziamo
+                Generatori a condensazione, ibridi e pompe di calore: ottimizziamo
                 regolazione climatica, valvole termostatiche e circolatori per ridurre i consumi mantenendo il comfort.
               </p>
               <ul class="service-list">
@@ -773,7 +762,7 @@
       <section id="chi-siamo" class="section company-section" aria-labelledby="chi-siamo-title">
         <h2 id="chi-siamo-title">Chi siamo</h2>
         <p class="section-intro section-intro--always-visible">
-          A Pietragalla (PZ), Termoidraulica Pietrafesa di Donatello Pietrafesa unisce qualità e professionalità al tuo servizio.
+          A San Nicola di Pietragalla (PZ), Termoidraulica Pietrafesa di Donatello Pietrafesa unisce qualità e professionalità al tuo servizio.
           L&apos;azienda si occupa di impianti termici e sanitari, assicurando servizi completi e personalizzati per
           soddisfare ogni esigenza domestica.
         </p>
