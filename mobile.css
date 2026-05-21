@@ -16,26 +16,23 @@
 
 .home-fold .stats-strip--numbers {
   margin-top: 0;
-  width: calc(100% + 2 * var(--main-pad-x));
-  margin-left: calc(-1 * var(--main-pad-x));
-  margin-right: calc(-1 * var(--main-pad-x));
 }
 
 .hero#home {
-  width: calc(100% + 2 * var(--main-pad-x));
-  max-width: none;
-  margin-left: calc(-1 * var(--main-pad-x));
-  margin-right: calc(-1 * var(--main-pad-x));
   margin-top: 0;
-  border-radius: 0;
-  background: #fff;
   min-height: 0;
   flex: 1 1 auto;
+  justify-content: center;
   align-items: stretch;
-  padding: 1.15rem var(--main-pad-x) 1rem;
-  box-shadow: none;
-  border: 0;
-  border-bottom: 0;
+  padding-block: 0.35rem;
+  padding-inline: var(--main-pad-x);
+  overflow: hidden;
+}
+
+#home .hero-bg--pipes {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.76) 100%),
+    url("assets/pipe-blue.jpg") center / cover no-repeat;
 }
 
 .stats-strip.stats-strip--brands {
@@ -64,21 +61,46 @@
 
 #home .hero-inner {
   display: flex !important;
+  flex: 0 0 auto !important;
   flex-direction: column !important;
-  gap: 0.85rem !important;
+  gap: 1rem !important;
+  margin-block: 0 !important;
+  padding-block: 1rem !important;
+  padding-inline: 1.15rem !important;
 }
 
-#home .hero-logo {
+#home .hero-visual {
   order: 1;
   margin: 0;
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+}
+
+#home .hero-services--copy {
+  display: none !important;
+}
+
+#home .hero-services--visual {
+  display: flex !important;
+  margin: 0 !important;
 }
 
 #home .hero-logo img {
   max-width: 100%;
   width: 100%;
-  max-height: min(38vh, 260px);
+  max-height: min(32vh, 220px);
   object-fit: contain;
   object-position: center top;
+}
+
+#home .hero-gallery {
+  gap: 3px !important;
+  max-width: min(100%, 20rem);
+  margin-inline: auto;
+  border-radius: 4px;
 }
 
 #home .hero-copy {
@@ -89,9 +111,12 @@
 }
 
 #home .hero-copy h1 {
+  font-family: var(--font);
+  font-weight: 700;
   font-size: clamp(1.4rem, 5.8vw, 1.75rem);
-  margin: 0;
+  letter-spacing: -0.02em;
   line-height: 1.15;
+  margin: 0;
 }
 
 #home .hero-copy > * {
@@ -101,18 +126,29 @@
   visibility: visible !important;
 }
 
-#home .hero-copy > p.hero-subtitle,
-#home .hero-copy > p.hero-lead {
-  display: block !important;
+#home .hero-subtitle,
+#home .hero-lead,
+#home .hero-bullets {
+  display: none !important;
 }
 
-#home .hero-services {
-  display: flex !important;
+#home .hero-services--visual {
   flex-direction: row !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
   align-items: center !important;
-  gap: 0.4rem !important;
-  margin: 0 !important;
+  justify-content: center !important;
+  gap: 0.28rem !important;
+  max-width: 100%;
+}
+
+#home .hero-services--visual li {
+  font-size: 0.7rem !important;
+  padding: 0.24rem 0.48rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  color: #ff6501 !important;
+  background: rgba(255, 101, 1, 0.12) !important;
+  border-color: #ff6501 !important;
 }
 
 #home .hero-services li {
@@ -125,35 +161,19 @@
 
 #home .hero-contact {
   display: inline-flex !important;
+  align-self: flex-start !important;
   margin: 0 !important;
+  padding-left: 0.85rem !important;
+  justify-content: flex-start !important;
 }
 
-#home .hero-subtitle {
-  display: block !important;
+#home .hero-address {
+  text-align: left !important;
+  align-self: flex-start !important;
+  width: 100%;
+  max-width: none;
   margin: 0 !important;
-  font-size: 0.94rem;
-  line-height: 1.45;
-  color: var(--text-secondary) !important;
-  font-weight: 600;
-}
-
-#home .hero-lead {
-  display: block !important;
-  margin: 0 !important;
-  font-size: 0.9rem;
-  line-height: 1.55;
-}
-
-#home .hero-bullets {
-  display: block !important;
-  margin: 0 !important;
-  padding-left: 1.05rem;
-  font-size: 0.86rem;
-  line-height: 1.5;
-}
-
-#home .hero-bullets li + li {
-  margin-top: 0.25rem;
+  padding-left: 0.85rem !important;
 }
 
 .card-text-collapsible {
