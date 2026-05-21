@@ -32,7 +32,7 @@
 #home .hero-bg--pipes {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.76) 100%),
-    url("assets/pipe-blue.jpg") center / cover no-repeat;
+    url("assets/pipe-blue.png") center / cover no-repeat;
 }
 
 .stats-strip.stats-strip--brands {
